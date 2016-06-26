@@ -62,6 +62,7 @@ class SlotColumnView: UIView {
             } else {
                 imageView.alpha = alphaUnfocused
             }
+            self.updateStyleForImageView(imageView, isFocused: imageView == self.focusedImageView())
         }
     }
     
@@ -76,16 +77,18 @@ class SlotColumnView: UIView {
         let destinationY = imageView.frame.origin.y + paddingBetweenElements + imageViewHeight
         let destinationFrame = CGRect(x: 0, y: destinationY, width: imageView.frame.width, height: imageView.frame.height)
         
+        self.updateStyleForImageView(imageView, isFocused: false)
+        imageView.alpha = alphaFocused
+        
         UIView.animateWithDuration(animationDuration, delay: delay, options: UIViewAnimationOptions.CurveLinear, animations: {
             imageView.frame = destinationFrame
-            imageView.alpha = self.alphaFocused
             }) { (finished) in
                 if self.isImageViewAtBottomPosition(imageView) {
                     self.resetImageViewPositionToTop(imageView)
                 }
                 if self.spinState == .Stop || self.spinState == .ReadyToSpin {
                     self.spinState == .ReadyToSpin
-                    imageView.alpha = (imageView == self.focusedImageView() ? self.alphaFocused : self.alphaUnfocused)
+                    self.updateStyleForImageView(imageView, isFocused: imageView == self.focusedImageView())
                     return
                 }
                 self.animateImageView(imageView, delay: 0)
@@ -129,6 +132,14 @@ class SlotColumnView: UIView {
         }
         
         return closestImageView
+    }
+    
+    private func updateStyleForImageView(imageView: UIImageView, isFocused: Bool) {
+        imageView.alpha = isFocused ? self.alphaFocused : self.alphaUnfocused
+        imageView.layer.shadowColor = UIColor.yellowColor().CGColor
+        imageView.layer.shadowOpacity = isFocused ? 1 : 0
+        imageView.layer.shadowOffset = CGSizeZero
+        imageView.layer.shadowRadius = isFocused ? 5 : 0
     }
 }
 
