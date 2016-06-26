@@ -72,4 +72,31 @@ class SlotColumnViewTests: XCTestCase {
         
         XCTAssertTrue(slotColumnView.spinState == .ReadyToSpin)
     }
+    
+    func testBlinkAnimation() {
+        let fruitImageName = getFruitImageName()
+        let slotElement = SlotElement(imageName: fruitImageName)
+        let slotColumn = SlotColumn(slotElements: [slotElement, slotElement, slotElement], numberOfSlotElementsOnScreen: 3)
+        
+        let slotColumnViewModel = SlotColumnViewModel(slotColumn: slotColumn)
+        let slotColumnView = SlotColumnView()
+        
+        slotColumnView.configureViewWithViewModel(slotColumnViewModel)
+        
+        slotColumnView.spinState = .ReadyToSpin
+        
+        XCTAssertTrue(slotColumnView.blinkAnimation())
+        
+        slotColumnView.spinState = .Spinning
+        
+        XCTAssertFalse(slotColumnView.blinkAnimation())
+        
+        slotColumnView.spinState = .ReadyToSpin
+        
+        slotColumnView.imageViews[0].image = nil
+        slotColumnView.imageViews[1].image = nil
+        slotColumnView.imageViews[2].image = nil
+        
+        XCTAssertFalse(slotColumnView.blinkAnimation())
+    }
 }

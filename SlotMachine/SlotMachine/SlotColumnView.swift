@@ -33,6 +33,7 @@ class SlotColumnView: UIView {
     
     private var numberOfImageViewsOnScreen: Int = 3 //Default
     private var nextImageIndexToDisplay = 0
+    private var blinkTimer: NSTimer!
     
     private var imageViewHeight: CGFloat {
         get {
@@ -49,12 +50,42 @@ class SlotColumnView: UIView {
         super.awakeFromNib()
         
         self.clipsToBounds = true
+        
+        let interval = NSTimeInterval(5.0 + CGFloat(arc4random()%10))
+        self.blinkTimer = NSTimer.scheduledTimerWithTimeInterval(interval,
+                                                                 target: self,
+                                                                 selector: #selector(SlotColumnView.blinkAnimation),
+                                                                 userInfo: nil,
+                                                                 repeats: true)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         
         updateImageViewFrames()
+    }
+    
+    func blinkAnimation() -> Bool {
+        guard spinState == .ReadyToSpin else { return false}
+        
+        let randomIndex = Int(arc4random()%UInt32(imageViews.count))
+        let imageView = imageViews[randomIndex]
+        
+        if let image = imageView.image {
+            let imageName = itemNameForImage(image)
+            let blinkName = "\(imageName)_Blink"
+            
+            let blinkImage = UIImage(named: blinkName)!
+                
+            imageView.image = blinkImage
+            
+            let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(0.2 * Double(NSEC_PER_SEC)))
+            dispatch_after(delayTime, dispatch_get_main_queue()) {
+                imageView.image = image
+            }
+            return true
+        }
+        return false
     }
     
     private func updateImageViewFrames() {
@@ -125,10 +156,9 @@ class SlotColumnView: UIView {
             let image = images[nextImageIndexToDisplay]
             nextImageIndexToDisplay += 1
             return image
-        } else {
-            nextImageIndexToDisplay = 1
-            return images[0]
         }
+        nextImageIndexToDisplay = 1
+        return images[0]
     }
     
     private func focusedImageView() -> UIImageView? {

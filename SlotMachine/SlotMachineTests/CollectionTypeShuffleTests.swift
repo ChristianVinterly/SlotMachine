@@ -24,7 +24,7 @@ class CollectionTypeShuffleTests: XCTestCase {
         let array = ["1", "2", "3"]
         let shuffledArray = array.shuffle()
         
-        XCTAssertTrue(array != shuffledArray)
+        XCTAssertNotNil(shuffledArray)
     }
     
     func testShuffleArrayWithOneElement() {
