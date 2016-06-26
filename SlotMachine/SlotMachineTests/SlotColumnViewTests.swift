@@ -54,4 +54,22 @@ class SlotColumnViewTests: XCTestCase {
         XCTAssertTrue(slotColumnView.images.count == 0)
         XCTAssertTrue(slotColumnView.imageViews.count == 0)
     }
+    
+    func testUpdateViewWithSpinState() {
+        let slotColumnView = SlotColumnView()
+        
+        XCTAssertTrue(slotColumnView.spinState == .ReadyToSpin)
+        
+        slotColumnView.spinState = .Spinning
+        
+        XCTAssertTrue(slotColumnView.spinState == .Spinning)
+        
+        slotColumnView.spinState = .Stop
+        
+        XCTAssertTrue(slotColumnView.spinState == .Stop)
+        
+        slotColumnView.spinState = .ReadyToSpin
+        
+        XCTAssertTrue(slotColumnView.spinState == .ReadyToSpin)
+    }
 }

@@ -12,6 +12,8 @@ import XCTest
 
 class SlotColumnViewModelTests: XCTestCase {
     
+    let numberOfSlotElementsOnScreen = 2
+    
     override func setUp() {
         super.setUp()
     }
@@ -24,7 +26,8 @@ class SlotColumnViewModelTests: XCTestCase {
         
         let fruitImageName = getFruitImageName()
         let slotElement = SlotElement(imageName: fruitImageName)
-        let slotColumn = SlotColumn(slotElements: [slotElement], numberOfSlotElementsOnScreen: 3)
+        let slotColumn = SlotColumn(slotElements: [slotElement],
+                                    numberOfSlotElementsOnScreen: numberOfSlotElementsOnScreen)
         
         let slotColumnViewModel = SlotColumnViewModel(slotColumn: slotColumn)
         
@@ -35,7 +38,8 @@ class SlotColumnViewModelTests: XCTestCase {
     func testImagesForColumn() {
         let fruitImageName = getFruitImageName()
         let slotElement = SlotElement(imageName: fruitImageName)
-        let slotColumn = SlotColumn(slotElements: [slotElement], numberOfSlotElementsOnScreen: 3)
+        let slotColumn = SlotColumn(slotElements: [slotElement],
+                                    numberOfSlotElementsOnScreen: numberOfSlotElementsOnScreen)
         
         let slotColumnViewModel = SlotColumnViewModel(slotColumn: slotColumn)
         let expectedImage = UIImage(named: fruitImageName)!
@@ -46,10 +50,11 @@ class SlotColumnViewModelTests: XCTestCase {
     func testNumberOfSlotsOnScreen() {
         let fruitImageName = getFruitImageName()
         let slotElement = SlotElement(imageName: fruitImageName)
-        let slotColumn = SlotColumn(slotElements: [slotElement], numberOfSlotElementsOnScreen: 3)
+        let slotColumn = SlotColumn(slotElements: [slotElement],
+                                    numberOfSlotElementsOnScreen: numberOfSlotElementsOnScreen)
         
         let slotColumnViewModel = SlotColumnViewModel(slotColumn: slotColumn)
         
-        XCTAssertTrue(slotColumnViewModel.numberOfSlotsOnScreen() == 3)
+        XCTAssertTrue(slotColumnViewModel.numberOfSlotsOnScreen() == numberOfSlotElementsOnScreen)
     }
 }

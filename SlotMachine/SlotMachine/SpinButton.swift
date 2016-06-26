@@ -22,6 +22,10 @@ class SpinButton: UIButton {
         }
     }
     
+    private let cornerRadius: CGFloat = 10
+    private let alphaWhenReady: CGFloat = 1.0
+    private let alphaWhenSpinning: CGFloat = 0.4
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -35,7 +39,7 @@ class SpinButton: UIButton {
     private func commonInit() {
         self.buttonState = .ReadyToSpin
         backgroundColor = AppConstants.Colors.Pink
-        layer.cornerRadius = 10
+        layer.cornerRadius = cornerRadius
     }
     
     private func attributesForTitle() -> [String : AnyObject] {
@@ -51,11 +55,11 @@ class SpinButton: UIButton {
         switch buttonState {
         case .ReadyToSpin:
             enabled = true
-            alpha = 1.0
+            alpha = alphaWhenReady
             titleAttributedString = NSAttributedString(string: "Spin", attributes: attributesForTitle())
         case .Spinning:
             enabled = false
-            alpha = 0.4
+            alpha = alphaWhenSpinning
             titleAttributedString = NSAttributedString(string: "Spinning...", attributes: attributesForTitle())
         }
         

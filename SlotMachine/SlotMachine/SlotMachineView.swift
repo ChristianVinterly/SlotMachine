@@ -10,14 +10,28 @@ import Foundation
 import UIKit
 
 class SlotMachineView: XibLoadingView {
+    
     @IBOutlet var slotColumnViews: [SlotColumnView]!
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var slotMachineFrameView: UIView!
+    
     @IBOutlet weak var leftTriangleView: TriangleView!
     @IBOutlet weak var rightTriangleView: TriangleView!
     
+    var spinState: SpinState = .ReadyToSpin {
+        didSet {
+            updateViewWithSpinState(spinState)
+        }
+    }
+    
     private let cornerRadius: CGFloat = 10
     private let borderWidth: CGFloat = 10
+    
+    private let animationDurationBase: CGFloat = 0.15
+    private let animationDurationVarianse: UInt32 = 20
+    private let animationDelayVarianse: UInt32 = 40
+    private let animationDenominator: CGFloat = 100
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -45,10 +59,22 @@ extension SlotMachineView: Configurable {
         
         let columnViewModels = viewModel.slotColumnViewModels()
         
+        let delay = CGFloat(arc4random()%animationDelayVarianse)/animationDenominator
+        
         for (index, slotColumnView) in slotColumnViews.enumerate() {
             if index < columnViewModels.count {
                 slotColumnView.configureViewWithViewModel(columnViewModels[index])
+                slotColumnView.animationDelay = NSTimeInterval(CGFloat(index) * delay)
+                slotColumnView.animationDuration = NSTimeInterval(animationDurationBase + CGFloat(arc4random()%animationDurationVarianse)/animationDenominator)
             }
+        }
+    }
+}
+
+extension SlotMachineView: SpinningObject {
+    func updateViewWithSpinState(spinState: SpinState) {
+        for slotColumnView in slotColumnViews {
+            slotColumnView.spinState = spinState
         }
     }
 }

@@ -12,6 +12,8 @@ import XCTest
 
 class SlotMachineViewModelTests: XCTestCase {
     
+    let numberOfSlotElementsOnScreen = 2
+    
     override func setUp() {
         super.setUp()
     }
@@ -24,7 +26,8 @@ class SlotMachineViewModelTests: XCTestCase {
         
         let fruitImageName = getFruitImageName()
         let slotElement = SlotElement(imageName: fruitImageName)
-        let slotColumn = SlotColumn(slotElements: [slotElement], numberOfSlotElementsOnScreen: 3)
+        let slotColumn = SlotColumn(slotElements: [slotElement],
+                                    numberOfSlotElementsOnScreen: numberOfSlotElementsOnScreen)
         let slotMachine = SlotMachine(slotColumns: [slotColumn])
         
         let slotMachineViewModel = SlotMachineViewModel(slotMachine: slotMachine)
@@ -36,7 +39,8 @@ class SlotMachineViewModelTests: XCTestCase {
     func testSlotColumnViewModels() {
         let fruitImageName = getFruitImageName()
         let slotElement = SlotElement(imageName: fruitImageName)
-        let slotColumn = SlotColumn(slotElements: [slotElement], numberOfSlotElementsOnScreen: 3)
+        let slotColumn = SlotColumn(slotElements: [slotElement],
+                                    numberOfSlotElementsOnScreen: numberOfSlotElementsOnScreen)
         let slotMachine = SlotMachine(slotColumns: [slotColumn])
         
         let slotMachineViewModel = SlotMachineViewModel(slotMachine: slotMachine)
