@@ -21,8 +21,10 @@ class SlotColumnView: UIView {
     
     var animationDelay: NSTimeInterval = 0
     var animationDuration: NSTimeInterval = 0.2
+    var selectedViewYPos: CGFloat = 0
     
     private var numberOfImageViewsOnScreen: Int = 3 //Default
+    private var nextImageIndexToDisplay = 0
     
     private var imageViewHeight: CGFloat {
         get {
@@ -32,6 +34,8 @@ class SlotColumnView: UIView {
     
     private let paddingBetweenElements: CGFloat = 15
     private let startOffset: CGFloat = 1.5
+    private let alphaFocused: CGFloat = 1.0
+    private let alphaUnfocused: CGFloat = 0.6
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -49,8 +53,15 @@ class SlotColumnView: UIView {
         for (i, imageView) in imageViews.enumerate() {
             let yPos = CGFloat(i) * imageViewHeight
             let offset = startOffset * imageViewHeight
-            let padding = paddingBetweenElements * CGFloat(i)
+            let padding = paddingBetweenElements * CGFloat(i - 1)
             imageView.frame = CGRectMake(0, yPos - offset + padding, self.frame.width, imageViewHeight)
+            
+            if imageViews.count/2 == i {
+                selectedViewYPos = imageView.frame.minY
+                imageView.alpha = alphaFocused
+            } else {
+                imageView.alpha = alphaUnfocused
+            }
         }
     }
     
@@ -67,12 +78,14 @@ class SlotColumnView: UIView {
         
         UIView.animateWithDuration(animationDuration, delay: delay, options: UIViewAnimationOptions.CurveLinear, animations: {
             imageView.frame = destinationFrame
+            imageView.alpha = self.alphaFocused
             }) { (finished) in
                 if self.isImageViewAtBottomPosition(imageView) {
                     self.resetImageViewPositionToTop(imageView)
                 }
                 if self.spinState == .Stop || self.spinState == .ReadyToSpin {
                     self.spinState == .ReadyToSpin
+                    imageView.alpha = (imageView == self.focusedImageView() ? self.alphaFocused : self.alphaUnfocused)
                     return
                 }
                 self.animateImageView(imageView, delay: 0)
@@ -85,7 +98,37 @@ class SlotColumnView: UIView {
     
     private func resetImageViewPositionToTop(imageView: UIImageView) {
         let offset = self.startOffset * self.imageViewHeight
-        imageView.frame = CGRectMake(0, -offset, self.frame.width, self.imageViewHeight)
+        imageView.image = getNextImage()
+        imageView.frame = CGRectMake(0, -offset - paddingBetweenElements, self.frame.width, self.imageViewHeight)
+    }
+    
+    private func getNextImage() -> UIImage {
+        if images.count > nextImageIndexToDisplay {
+            let image = images[nextImageIndexToDisplay]
+            nextImageIndexToDisplay += 1
+            return image
+        } else {
+            nextImageIndexToDisplay = 1
+            return images[0]
+        }
+    }
+    
+    private func focusedImageView() -> UIImageView? {
+        
+        var closestImageView: UIImageView?
+        var closestDistance = CGFloat.max
+        
+        for imageView in imageViews {
+            let yDist = selectedViewYPos - imageView.frame.midY
+            let distance = sqrt(yDist * yDist)
+            
+            if distance < closestDistance {
+                closestDistance = distance
+                closestImageView = imageView
+            }
+        }
+        
+        return closestImageView
     }
 }
 
@@ -109,6 +152,12 @@ extension SlotColumnView: Configurable {
                 addSubview(imageView)
                 imageViews.append(imageView)
             }
+        }
+        
+        if numberOfImageViews > images.count {
+            nextImageIndexToDisplay = numberOfImageViews
+        } else {
+            nextImageIndexToDisplay = 0
         }
         
         updateImageViewFrames()
