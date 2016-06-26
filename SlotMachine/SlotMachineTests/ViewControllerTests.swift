@@ -64,4 +64,13 @@ class ViewControllerTests: XCTestCase {
         expectationForPredicate(exists, evaluatedWithObject: viewController.spinButton, handler: nil)
         waitForExpectationsWithTimeout(5, handler: nil)
     }
+    
+    func testPrizeWonWithImage() {
+        let image = UIImage(named: "Apple")!
+        let subviewsCount = viewController.view.subviews.count
+        
+        viewController.prizeWonWithImage(image, itemName: "Apple")
+        
+        XCTAssertTrue(subviewsCount != viewController.view.subviews.count)
+    }
 }

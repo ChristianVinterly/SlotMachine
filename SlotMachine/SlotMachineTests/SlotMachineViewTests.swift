@@ -60,4 +60,35 @@ class SlotMachineViewTests: XCTestCase {
         
         XCTAssertTrue(slotMachineView.slotColumnViews.first?.images.count == 0)
     }
+    
+    func testSlotMachineDelegate() {
+        let slotMachineView = SlotMachineView()
+        
+        let slotMachineDelegateMock = SlotMachineDelegateMock()
+        slotMachineView.slotMachineDelegate = slotMachineDelegateMock
+        
+        XCTAssertFalse(slotMachineDelegateMock.newSpinResultCalled)
+        XCTAssertFalse(slotMachineDelegateMock.prizeWonWithImageCalled)
+        
+        let image = UIImage(named: "Apple")!
+        slotMachineView.stoppedOnImage(image, itemName: "Apple", columnIndex: 0)
+        slotMachineView.stoppedOnImage(image, itemName: "Apple", columnIndex: 1)
+        slotMachineView.stoppedOnImage(image, itemName: "Apple", columnIndex: 2)
+        
+        XCTAssertTrue(slotMachineDelegateMock.newSpinResultCalled)
+        XCTAssertTrue(slotMachineDelegateMock.prizeWonWithImageCalled)
+    }
+}
+
+class SlotMachineDelegateMock: SlotMachineDelegate {
+    var newSpinResultCalled = false
+    var prizeWonWithImageCalled = false
+    
+    func newSpinResult(spinResult: SpinResult) {
+        newSpinResultCalled = true
+    }
+    
+    func prizeWonWithImage(image: UIImage, itemName: String) {
+        prizeWonWithImageCalled = true
+    }
 }

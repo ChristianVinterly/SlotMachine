@@ -11,6 +11,15 @@
 		AA9602A01D20162900ADC48C /* SpinButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA96029F1D20162900ADC48C /* SpinButtonTests.swift */; };
 		AA9602A21D20177300ADC48C /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9602A11D20177300ADC48C /* ViewControllerTests.swift */; };
 		AA9602A41D201C5700ADC48C /* SpinningObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9602A31D201C5700ADC48C /* SpinningObject.swift */; };
+		AA9602AB1D20668700ADC48C /* Array+AllEqual.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9602AA1D20668700ADC48C /* Array+AllEqual.swift */; };
+		AA9602AE1D206B5900ADC48C /* PrizeAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9602AD1D206B5900ADC48C /* PrizeAlertView.swift */; };
+		AA9602B01D206B6900ADC48C /* PrizeAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9602AF1D206B6900ADC48C /* PrizeAlertView.xib */; };
+		AA9602B21D20765300ADC48C /* SpinResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9602B11D20765300ADC48C /* SpinResultTableViewCell.swift */; };
+		AA9602B61D2085C300ADC48C /* CollectionType+Shuffle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9602B51D2085C300ADC48C /* CollectionType+Shuffle.swift */; };
+		AA9602B81D20865900ADC48C /* PrizeAlertViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9602B71D20865900ADC48C /* PrizeAlertViewTests.swift */; };
+		AA9602BA1D20887A00ADC48C /* SpinResultTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9602B91D20887A00ADC48C /* SpinResultTableViewCellTests.swift */; };
+		AA9602BD1D208ADF00ADC48C /* CollectionTypeShuffleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9602BC1D208ADF00ADC48C /* CollectionTypeShuffleTests.swift */; };
+		AA9602BF1D208F2F00ADC48C /* ArrayAllEqualTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9602BE1D208F2F00ADC48C /* ArrayAllEqualTests.swift */; };
 		AAA18F641D1F4A6C0030F311 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA18F631D1F4A6C0030F311 /* AppDelegate.swift */; };
 		AAA18F661D1F4A6C0030F311 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA18F651D1F4A6C0030F311 /* ViewController.swift */; };
 		AAA18F691D1F4A6C0030F311 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAA18F671D1F4A6C0030F311 /* Main.storyboard */; };
@@ -62,6 +71,15 @@
 		AA96029F1D20162900ADC48C /* SpinButtonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinButtonTests.swift; sourceTree = "<group>"; };
 		AA9602A11D20177300ADC48C /* ViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		AA9602A31D201C5700ADC48C /* SpinningObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinningObject.swift; sourceTree = "<group>"; };
+		AA9602AA1D20668700ADC48C /* Array+AllEqual.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+AllEqual.swift"; sourceTree = "<group>"; };
+		AA9602AD1D206B5900ADC48C /* PrizeAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrizeAlertView.swift; sourceTree = "<group>"; };
+		AA9602AF1D206B6900ADC48C /* PrizeAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrizeAlertView.xib; sourceTree = "<group>"; };
+		AA9602B11D20765300ADC48C /* SpinResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinResultTableViewCell.swift; sourceTree = "<group>"; };
+		AA9602B51D2085C300ADC48C /* CollectionType+Shuffle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CollectionType+Shuffle.swift"; sourceTree = "<group>"; };
+		AA9602B71D20865900ADC48C /* PrizeAlertViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrizeAlertViewTests.swift; sourceTree = "<group>"; };
+		AA9602B91D20887A00ADC48C /* SpinResultTableViewCellTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinResultTableViewCellTests.swift; sourceTree = "<group>"; };
+		AA9602BC1D208ADF00ADC48C /* CollectionTypeShuffleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTypeShuffleTests.swift; sourceTree = "<group>"; };
+		AA9602BE1D208F2F00ADC48C /* ArrayAllEqualTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayAllEqualTests.swift; sourceTree = "<group>"; };
 		AAA18F601D1F4A6C0030F311 /* SlotMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlotMachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAA18F631D1F4A6C0030F311 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAA18F651D1F4A6C0030F311 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +157,8 @@
 				AAA18FB61D1FCD2D0030F311 /* SlotMachineViewTests.swift */,
 				AAA18FC71D200CFB0030F311 /* TriangleViewTests.swift */,
 				AA96029F1D20162900ADC48C /* SpinButtonTests.swift */,
+				AA9602B71D20865900ADC48C /* PrizeAlertViewTests.swift */,
+				AA9602B91D20887A00ADC48C /* SpinResultTableViewCellTests.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -149,6 +169,40 @@
 				AA9602A11D20177300ADC48C /* ViewControllerTests.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AA9602AC1D206B1D00ADC48C /* PrizeAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				AA9602AD1D206B5900ADC48C /* PrizeAlertView.swift */,
+				AA9602AF1D206B6900ADC48C /* PrizeAlertView.xib */,
+			);
+			name = PrizeAlertView;
+			sourceTree = "<group>";
+		};
+		AA9602B31D2080AD00ADC48C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AA9602B11D20765300ADC48C /* SpinResultTableViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		AA9602B41D2080B800ADC48C /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				AA96029D1D200F6200ADC48C /* SpinButton.swift */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
+		AA9602BB1D208AC800ADC48C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AA9602BC1D208ADF00ADC48C /* CollectionTypeShuffleTests.swift */,
+				AA9602BE1D208F2F00ADC48C /* ArrayAllEqualTests.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		AAA18F571D1F4A6B0030F311 = {
@@ -192,6 +246,7 @@
 		AAA18F771D1F4A6C0030F311 /* SlotMachineTests */ = {
 			isa = PBXGroup;
 			children = (
+				AA9602BB1D208AC800ADC48C /* Extensions */,
 				AA9602A51D20364900ADC48C /* ViewModels */,
 				AA9602A61D20365600ADC48C /* Views */,
 				AA9602A71D20366400ADC48C /* ViewControllers */,
@@ -252,9 +307,11 @@
 			children = (
 				AAA18FAF1D1F528D0030F311 /* XibLoadingView.swift */,
 				AAA18FC21D20012F0030F311 /* TriangleView.swift */,
-				AA96029D1D200F6200ADC48C /* SpinButton.swift */,
 				AAA18FA21D1F4D1F0030F311 /* SlotColumnView.swift */,
+				AA9602B41D2080B800ADC48C /* Buttons */,
+				AA9602B31D2080AD00ADC48C /* Cells */,
 				AAA18FAE1D1F52620030F311 /* SlotMachineView */,
+				AA9602AC1D206B1D00ADC48C /* PrizeAlertView */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -281,6 +338,8 @@
 			isa = PBXGroup;
 			children = (
 				AAA18FC51D2003930030F311 /* UIColor+Components.swift */,
+				AA9602AA1D20668700ADC48C /* Array+AllEqual.swift */,
+				AA9602B51D2085C300ADC48C /* CollectionType+Shuffle.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -390,6 +449,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAA18F6E1D1F4A6C0030F311 /* LaunchScreen.storyboard in Resources */,
+				AA9602B01D206B6900ADC48C /* PrizeAlertView.xib in Resources */,
 				AAA18F6B1D1F4A6C0030F311 /* Assets.xcassets in Resources */,
 				AAA18FAD1D1F52280030F311 /* SlotMachineView.xib in Resources */,
 				AAA18F691D1F4A6C0030F311 /* Main.storyboard in Resources */,
@@ -420,6 +480,9 @@
 				AAA18FC31D20012F0030F311 /* TriangleView.swift in Sources */,
 				AA96029E1D200F6200ADC48C /* SpinButton.swift in Sources */,
 				AA9602A41D201C5700ADC48C /* SpinningObject.swift in Sources */,
+				AA9602B61D2085C300ADC48C /* CollectionType+Shuffle.swift in Sources */,
+				AA9602AE1D206B5900ADC48C /* PrizeAlertView.swift in Sources */,
+				AA9602B21D20765300ADC48C /* SpinResultTableViewCell.swift in Sources */,
 				AAA18FA61D1F4DDE0030F311 /* Configurable.swift in Sources */,
 				AAA18F9C1D1F4AF60030F311 /* SlotElement.swift in Sources */,
 				AAA18F971D1F4ADF0030F311 /* SlotColumnViewModel.swift in Sources */,
@@ -431,6 +494,7 @@
 				AAA18F661D1F4A6C0030F311 /* ViewController.swift in Sources */,
 				AAA18F961D1F4ADF0030F311 /* SlotElementViewModel.swift in Sources */,
 				AAA18FAB1D1F51610030F311 /* SlotMachineView.swift in Sources */,
+				AA9602AB1D20668700ADC48C /* Array+AllEqual.swift in Sources */,
 				AAA18FC11D1FFF730030F311 /* AppConstants.swift in Sources */,
 				AAA18F641D1F4A6C0030F311 /* AppDelegate.swift in Sources */,
 				AAA18FA31D1F4D1F0030F311 /* SlotColumnView.swift in Sources */,
@@ -441,14 +505,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA9602BA1D20887A00ADC48C /* SpinResultTableViewCellTests.swift in Sources */,
 				AAA18FBF1D1FDCAF0030F311 /* SlotMachineViewModelTests.swift in Sources */,
 				AA9602A01D20162900ADC48C /* SpinButtonTests.swift in Sources */,
+				AA9602BD1D208ADF00ADC48C /* CollectionTypeShuffleTests.swift in Sources */,
 				AAA18FB91D1FCD460030F311 /* SlotColumnViewTests.swift in Sources */,
 				AAA18FBD1D1FDC660030F311 /* TestHelper.swift in Sources */,
+				AA9602BF1D208F2F00ADC48C /* ArrayAllEqualTests.swift in Sources */,
 				AAA18FB71D1FCD2D0030F311 /* SlotMachineViewTests.swift in Sources */,
 				AAA18F791D1F4A6C0030F311 /* SlotElementViewModelTests.swift in Sources */,
 				AAA18FBB1D1FDC4A0030F311 /* SlotColumnViewModelTests.swift in Sources */,
 				AA9602A21D20177300ADC48C /* ViewControllerTests.swift in Sources */,
+				AA9602B81D20865900ADC48C /* PrizeAlertViewTests.swift in Sources */,
 				AAA18FC81D200CFB0030F311 /* TriangleViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -23,7 +23,7 @@ struct SlotMachineViewModel {
         
         var slotColumns: [SlotColumn] = []
         for _ in 0..<numberOfColumns {
-            let slotColumn = SlotColumn(slotElements: slotElements,
+            let slotColumn = SlotColumn(slotElements: slotElements.shuffle(),
                                         numberOfSlotElementsOnScreen: numberOfSlotElementsInColumnOnScreen)
             slotColumns.append(slotColumn)
         }

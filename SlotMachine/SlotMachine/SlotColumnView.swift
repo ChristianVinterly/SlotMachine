@@ -9,8 +9,16 @@
 import Foundation
 import UIKit
 
+protocol SlotColumnDelegate: class {
+    func stoppedOnImage(image: UIImage, itemName: String, columnIndex: Int)
+}
+
 class SlotColumnView: UIView {
+    
+    weak var slotColumnDelegate: SlotColumnDelegate?
+    
     var images: [UIImage] = []
+    var imageNames: [String] = []
     var imageViews: [UIImageView] = []
     
     var spinState: SpinState = .ReadyToSpin {
@@ -89,6 +97,13 @@ class SlotColumnView: UIView {
                 if self.spinState == .Stop || self.spinState == .ReadyToSpin {
                     self.spinState == .ReadyToSpin
                     self.updateStyleForImageView(imageView, isFocused: imageView == self.focusedImageView())
+                    
+                    if let image = self.focusedImageView()?.image where imageView == self.imageViews.last {
+                        self.slotColumnDelegate?.stoppedOnImage(image,
+                                                                itemName: self.itemNameForImage(image),
+                                                                columnIndex: self.tag)
+                    }
+                    
                     return
                 }
                 self.animateImageView(imageView, delay: 0)
@@ -141,6 +156,15 @@ class SlotColumnView: UIView {
         imageView.layer.shadowOffset = CGSizeZero
         imageView.layer.shadowRadius = isFocused ? 5 : 0
     }
+    
+    private func itemNameForImage(image: UIImage) -> String {
+        for (index, imageInImages) in images.enumerate() {
+            if image == imageInImages {
+                return imageNames[index]
+            }
+        }
+        return ""
+    }
 }
 
 extension SlotColumnView: Configurable {
@@ -149,6 +173,7 @@ extension SlotColumnView: Configurable {
         guard let viewModel = viewModel as? SlotColumnViewModel else { return }
         
         images = viewModel.imagesForColumn()
+        imageNames = viewModel.itemNamesForColumn()
         
         self.numberOfImageViewsOnScreen = viewModel.numberOfSlotsOnScreen()
         

@@ -16,6 +16,10 @@ struct SlotColumnViewModel {
         return slotColumn.slotElements.map{UIImage(named: $0.imageName)!}
     }
     
+    func itemNamesForColumn() -> [String] {
+        return slotColumn.slotElements.map{$0.imageName}
+    }
+    
     func numberOfSlotsOnScreen() -> Int {
         return slotColumn.numberOfSlotElementsOnScreen
     }
