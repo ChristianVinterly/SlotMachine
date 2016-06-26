@@ -12,8 +12,24 @@
 		AAA18F691D1F4A6C0030F311 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAA18F671D1F4A6C0030F311 /* Main.storyboard */; };
 		AAA18F6B1D1F4A6C0030F311 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAA18F6A1D1F4A6C0030F311 /* Assets.xcassets */; };
 		AAA18F6E1D1F4A6C0030F311 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAA18F6C1D1F4A6C0030F311 /* LaunchScreen.storyboard */; };
-		AAA18F791D1F4A6C0030F311 /* SlotMachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA18F781D1F4A6C0030F311 /* SlotMachineTests.swift */; };
+		AAA18F791D1F4A6C0030F311 /* SlotElementViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA18F781D1F4A6C0030F311 /* SlotElementViewModelTests.swift */; };
 		AAA18F841D1F4A6C0030F311 /* SlotMachineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA18F831D1F4A6C0030F311 /* SlotMachineUITests.swift */; };
+		AAA18F961D1F4ADF0030F311 /* SlotElementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA18F931D1F4ADF0030F311 /* SlotElementViewModel.swift */; };
+		AAA18F971D1F4ADF0030F311 /* SlotColumnViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA18F941D1F4ADF0030F311 /* SlotColumnViewModel.swift */; };
+		AAA18F981D1F4ADF0030F311 /* SlotMachineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA18F951D1F4ADF0030F311 /* SlotMachineViewModel.swift */; };
+		AAA18F9C1D1F4AF60030F311 /* SlotElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA18F991D1F4AF60030F311 /* SlotElement.swift */; };
+		AAA18F9D1D1F4AF60030F311 /* SlotColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA18F9A1D1F4AF60030F311 /* SlotColumn.swift */; };
+		AAA18F9E1D1F4AF60030F311 /* SlotMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA18F9B1D1F4AF60030F311 /* SlotMachine.swift */; };
+		AAA18FA31D1F4D1F0030F311 /* SlotColumnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA18FA21D1F4D1F0030F311 /* SlotColumnView.swift */; };
+		AAA18FA61D1F4DDE0030F311 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA18FA51D1F4DDE0030F311 /* Configurable.swift */; };
+		AAA18FAB1D1F51610030F311 /* SlotMachineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA18FAA1D1F51610030F311 /* SlotMachineView.swift */; };
+		AAA18FAD1D1F52280030F311 /* SlotMachineView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAA18FAC1D1F52280030F311 /* SlotMachineView.xib */; };
+		AAA18FB01D1F528D0030F311 /* XibLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA18FAF1D1F528D0030F311 /* XibLoadingView.swift */; };
+		AAA18FB71D1FCD2D0030F311 /* SlotMachineViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA18FB61D1FCD2D0030F311 /* SlotMachineViewTests.swift */; };
+		AAA18FB91D1FCD460030F311 /* SlotColumnViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA18FB81D1FCD460030F311 /* SlotColumnViewTests.swift */; };
+		AAA18FBB1D1FDC4A0030F311 /* SlotColumnViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA18FBA1D1FDC4A0030F311 /* SlotColumnViewModelTests.swift */; };
+		AAA18FBD1D1FDC660030F311 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA18FBC1D1FDC660030F311 /* TestHelper.swift */; };
+		AAA18FBF1D1FDCAF0030F311 /* SlotMachineViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA18FBE1D1FDCAF0030F311 /* SlotMachineViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +58,27 @@
 		AAA18F6D1D1F4A6C0030F311 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAA18F6F1D1F4A6C0030F311 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAA18F741D1F4A6C0030F311 /* SlotMachineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlotMachineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AAA18F781D1F4A6C0030F311 /* SlotMachineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotMachineTests.swift; sourceTree = "<group>"; };
+		AAA18F781D1F4A6C0030F311 /* SlotElementViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotElementViewModelTests.swift; sourceTree = "<group>"; };
 		AAA18F7A1D1F4A6C0030F311 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAA18F7F1D1F4A6C0030F311 /* SlotMachineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlotMachineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAA18F831D1F4A6C0030F311 /* SlotMachineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotMachineUITests.swift; sourceTree = "<group>"; };
 		AAA18F851D1F4A6C0030F311 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAA18F931D1F4ADF0030F311 /* SlotElementViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotElementViewModel.swift; sourceTree = "<group>"; };
+		AAA18F941D1F4ADF0030F311 /* SlotColumnViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotColumnViewModel.swift; sourceTree = "<group>"; };
+		AAA18F951D1F4ADF0030F311 /* SlotMachineViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotMachineViewModel.swift; sourceTree = "<group>"; };
+		AAA18F991D1F4AF60030F311 /* SlotElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotElement.swift; sourceTree = "<group>"; };
+		AAA18F9A1D1F4AF60030F311 /* SlotColumn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotColumn.swift; sourceTree = "<group>"; };
+		AAA18F9B1D1F4AF60030F311 /* SlotMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotMachine.swift; sourceTree = "<group>"; };
+		AAA18FA21D1F4D1F0030F311 /* SlotColumnView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotColumnView.swift; sourceTree = "<group>"; };
+		AAA18FA51D1F4DDE0030F311 /* Configurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
+		AAA18FAA1D1F51610030F311 /* SlotMachineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotMachineView.swift; sourceTree = "<group>"; };
+		AAA18FAC1D1F52280030F311 /* SlotMachineView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SlotMachineView.xib; sourceTree = "<group>"; };
+		AAA18FAF1D1F528D0030F311 /* XibLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibLoadingView.swift; sourceTree = "<group>"; };
+		AAA18FB61D1FCD2D0030F311 /* SlotMachineViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotMachineViewTests.swift; sourceTree = "<group>"; };
+		AAA18FB81D1FCD460030F311 /* SlotColumnViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotColumnViewTests.swift; sourceTree = "<group>"; };
+		AAA18FBA1D1FDC4A0030F311 /* SlotColumnViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotColumnViewModelTests.swift; sourceTree = "<group>"; };
+		AAA18FBC1D1FDC660030F311 /* TestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
+		AAA18FBE1D1FDCAF0030F311 /* SlotMachineViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotMachineViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +129,15 @@
 		AAA18F621D1F4A6C0030F311 /* SlotMachine */ = {
 			isa = PBXGroup;
 			children = (
-				AAA18F631D1F4A6C0030F311 /* AppDelegate.swift */,
-				AAA18F651D1F4A6C0030F311 /* ViewController.swift */,
-				AAA18F671D1F4A6C0030F311 /* Main.storyboard */,
-				AAA18F6A1D1F4A6C0030F311 /* Assets.xcassets */,
-				AAA18F6C1D1F4A6C0030F311 /* LaunchScreen.storyboard */,
 				AAA18F6F1D1F4A6C0030F311 /* Info.plist */,
+				AAA18F6A1D1F4A6C0030F311 /* Assets.xcassets */,
+				AAA18F631D1F4A6C0030F311 /* AppDelegate.swift */,
+				AAA18FA01D1F4BF00030F311 /* Storyboards */,
+				AAA18FA41D1F4D610030F311 /* Protocols */,
+				AAA18F921D1F4ACA0030F311 /* Models */,
+				AAA18F911D1F4AC40030F311 /* ViewModels */,
+				AAA18FA11D1F4CDA0030F311 /* Views */,
+				AAA18F9F1D1F4BE00030F311 /* ViewControllers */,
 			);
 			path = SlotMachine;
 			sourceTree = "<group>";
@@ -110,7 +145,12 @@
 		AAA18F771D1F4A6C0030F311 /* SlotMachineTests */ = {
 			isa = PBXGroup;
 			children = (
-				AAA18F781D1F4A6C0030F311 /* SlotMachineTests.swift */,
+				AAA18F781D1F4A6C0030F311 /* SlotElementViewModelTests.swift */,
+				AAA18FBA1D1FDC4A0030F311 /* SlotColumnViewModelTests.swift */,
+				AAA18FBE1D1FDCAF0030F311 /* SlotMachineViewModelTests.swift */,
+				AAA18FB81D1FCD460030F311 /* SlotColumnViewTests.swift */,
+				AAA18FB61D1FCD2D0030F311 /* SlotMachineViewTests.swift */,
+				AAA18FBC1D1FDC660030F311 /* TestHelper.swift */,
 				AAA18F7A1D1F4A6C0030F311 /* Info.plist */,
 			);
 			path = SlotMachineTests;
@@ -123,6 +163,70 @@
 				AAA18F851D1F4A6C0030F311 /* Info.plist */,
 			);
 			path = SlotMachineUITests;
+			sourceTree = "<group>";
+		};
+		AAA18F911D1F4AC40030F311 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AAA18F931D1F4ADF0030F311 /* SlotElementViewModel.swift */,
+				AAA18F941D1F4ADF0030F311 /* SlotColumnViewModel.swift */,
+				AAA18F951D1F4ADF0030F311 /* SlotMachineViewModel.swift */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		AAA18F921D1F4ACA0030F311 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AAA18F991D1F4AF60030F311 /* SlotElement.swift */,
+				AAA18F9A1D1F4AF60030F311 /* SlotColumn.swift */,
+				AAA18F9B1D1F4AF60030F311 /* SlotMachine.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		AAA18F9F1D1F4BE00030F311 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AAA18F651D1F4A6C0030F311 /* ViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AAA18FA01D1F4BF00030F311 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AAA18F6C1D1F4A6C0030F311 /* LaunchScreen.storyboard */,
+				AAA18F671D1F4A6C0030F311 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		AAA18FA11D1F4CDA0030F311 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AAA18FAF1D1F528D0030F311 /* XibLoadingView.swift */,
+				AAA18FA21D1F4D1F0030F311 /* SlotColumnView.swift */,
+				AAA18FAE1D1F52620030F311 /* SlotMachineView */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		AAA18FA41D1F4D610030F311 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				AAA18FA51D1F4DDE0030F311 /* Configurable.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		AAA18FAE1D1F52620030F311 /* SlotMachineView */ = {
+			isa = PBXGroup;
+			children = (
+				AAA18FAA1D1F51610030F311 /* SlotMachineView.swift */,
+				AAA18FAC1D1F52280030F311 /* SlotMachineView.xib */,
+			);
+			name = SlotMachineView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +335,7 @@
 			files = (
 				AAA18F6E1D1F4A6C0030F311 /* LaunchScreen.storyboard in Resources */,
 				AAA18F6B1D1F4A6C0030F311 /* Assets.xcassets in Resources */,
+				AAA18FAD1D1F52280030F311 /* SlotMachineView.xib in Resources */,
 				AAA18F691D1F4A6C0030F311 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,8 +361,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAA18FA61D1F4DDE0030F311 /* Configurable.swift in Sources */,
+				AAA18F9C1D1F4AF60030F311 /* SlotElement.swift in Sources */,
+				AAA18F971D1F4ADF0030F311 /* SlotColumnViewModel.swift in Sources */,
+				AAA18FB01D1F528D0030F311 /* XibLoadingView.swift in Sources */,
+				AAA18F981D1F4ADF0030F311 /* SlotMachineViewModel.swift in Sources */,
+				AAA18F9E1D1F4AF60030F311 /* SlotMachine.swift in Sources */,
+				AAA18F9D1D1F4AF60030F311 /* SlotColumn.swift in Sources */,
 				AAA18F661D1F4A6C0030F311 /* ViewController.swift in Sources */,
+				AAA18F961D1F4ADF0030F311 /* SlotElementViewModel.swift in Sources */,
+				AAA18FAB1D1F51610030F311 /* SlotMachineView.swift in Sources */,
 				AAA18F641D1F4A6C0030F311 /* AppDelegate.swift in Sources */,
+				AAA18FA31D1F4D1F0030F311 /* SlotColumnView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +380,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAA18F791D1F4A6C0030F311 /* SlotMachineTests.swift in Sources */,
+				AAA18FBF1D1FDCAF0030F311 /* SlotMachineViewModelTests.swift in Sources */,
+				AAA18FB91D1FCD460030F311 /* SlotColumnViewTests.swift in Sources */,
+				AAA18FBD1D1FDC660030F311 /* TestHelper.swift in Sources */,
+				AAA18FB71D1FCD2D0030F311 /* SlotMachineViewTests.swift in Sources */,
+				AAA18F791D1F4A6C0030F311 /* SlotElementViewModelTests.swift in Sources */,
+				AAA18FBB1D1FDC4A0030F311 /* SlotColumnViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
