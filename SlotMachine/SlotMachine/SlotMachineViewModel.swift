@@ -14,4 +14,22 @@ struct SlotMachineViewModel {
     func slotColumnViewModels() -> [SlotColumnViewModel] {
         return slotMachine.slotColumns.map{SlotColumnViewModel(slotColumn: $0)}
     }
+    
+    static func createSlotMachineViewModel(imageNames: [String],
+                                           numberOfColumns: Int,
+                                           numberOfSlotElementsInColumnOnScreen: Int) -> SlotMachineViewModel {
+        
+        let slotElements = imageNames.map{SlotElement(imageName: $0)}
+        
+        var slotColumns: [SlotColumn] = []
+        for _ in 0..<numberOfColumns {
+            let slotColumn = SlotColumn(slotElements: slotElements,
+                                        numberOfSlotElementsOnScreen: numberOfSlotElementsInColumnOnScreen)
+            slotColumns.append(slotColumn)
+        }
+        
+        let slotMachine = SlotMachine(slotColumns: slotColumns)
+        
+        return SlotMachineViewModel(slotMachine: slotMachine)
+    }
 }

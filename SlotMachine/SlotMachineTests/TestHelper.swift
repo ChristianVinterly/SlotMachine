@@ -9,5 +9,5 @@
 import Foundation
 
 func getFruitImageName() -> String {
-    return "CharactersBright_NoLine1"
+    return "Apple"
 }

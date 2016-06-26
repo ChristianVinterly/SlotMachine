@@ -11,6 +11,32 @@ import UIKit
 
 class SlotMachineView: XibLoadingView {
     @IBOutlet var slotColumnViews: [SlotColumnView]!
+    @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var slotMachineFrameView: UIView!
+    @IBOutlet weak var leftTriangleView: TriangleView!
+    @IBOutlet weak var rightTriangleView: TriangleView!
+    
+    private let cornerRadius: CGFloat = 10
+    private let borderWidth: CGFloat = 10
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        updateStyleForSlotMachineFrameView()
+        updateStyleForTriangles()
+    }
+    
+    private func updateStyleForSlotMachineFrameView() {
+        slotMachineFrameView.clipsToBounds = true
+        slotMachineFrameView.layer.cornerRadius = cornerRadius
+        slotMachineFrameView.layer.borderWidth = borderWidth
+        slotMachineFrameView.layer.borderColor = AppConstants.Colors.Green.CGColor
+    }
+    
+    private func updateStyleForTriangles() {
+        leftTriangleView.triangleDirection = .Right
+        rightTriangleView.triangleDirection = .Left
+    }
 }
 
 extension SlotMachineView: Configurable {

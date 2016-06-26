@@ -3,44 +3,87 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SlotMachineView" customModule="SlotMachine" customModuleProvider="target">
             <connections>
+                <outlet property="leftTriangleView" destination="4Sn-4L-Iej" id="MmN-fF-yPj"/>
+                <outlet property="rightTriangleView" destination="tBN-Ee-Hvm" id="z0M-I9-7T4"/>
+                <outlet property="slotMachineFrameView" destination="lFz-dv-YfG" id="wqh-lC-UGZ"/>
+                <outlet property="stackView" destination="Ib4-Uc-0mx" id="k8u-5F-Pb9"/>
                 <outletCollection property="slotColumnViews" destination="b8X-BO-7VI" collectionClass="NSMutableArray" id="oNq-j8-A6m"/>
                 <outletCollection property="slotColumnViews" destination="be5-ms-4jd" collectionClass="NSMutableArray" id="Iod-BD-s2D"/>
                 <outletCollection property="slotColumnViews" destination="CEF-f2-eKv" collectionClass="NSMutableArray" id="WRw-Qx-vUe"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="BackgroundView">
             <rect key="frame" x="0.0" y="0.0" width="484" height="421"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ib4-Uc-0mx">
-                    <rect key="frame" x="0.0" y="0.0" width="484" height="421"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lFz-dv-YfG" userLabel="SlotMachineFrameView">
+                    <rect key="frame" x="20" y="10" width="444" height="401"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8X-BO-7VI" customClass="SlotColumnView" customModule="SlotMachine" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="158" height="421"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="be5-ms-4jd" customClass="SlotColumnView" customModule="SlotMachine" customModuleProvider="target">
-                            <rect key="frame" x="163" y="0.0" width="158" height="421"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEF-f2-eKv" customClass="SlotColumnView" customModule="SlotMachine" customModuleProvider="target">
-                            <rect key="frame" x="326" y="0.0" width="158" height="421"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ib4-Uc-0mx">
+                            <rect key="frame" x="50" y="0.0" width="344" height="401"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8X-BO-7VI" customClass="SlotColumnView" customModule="SlotMachine" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="104.5" height="401"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="be5-ms-4jd" customClass="SlotColumnView" customModule="SlotMachine" customModuleProvider="target">
+                                    <rect key="frame" x="119.5" y="0.0" width="105" height="401"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEF-f2-eKv" customClass="SlotColumnView" customModule="SlotMachine" customModuleProvider="target">
+                                    <rect key="frame" x="239.5" y="0.0" width="104.5" height="401"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                            </subviews>
+                        </stackView>
                     </subviews>
-                </stackView>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Ib4-Uc-0mx" secondAttribute="bottom" id="4UW-ge-ih6"/>
+                        <constraint firstItem="Ib4-Uc-0mx" firstAttribute="leading" secondItem="lFz-dv-YfG" secondAttribute="leading" constant="50" id="RyK-Sc-JPc"/>
+                        <constraint firstItem="Ib4-Uc-0mx" firstAttribute="top" secondItem="lFz-dv-YfG" secondAttribute="top" id="SNv-PQ-kVH"/>
+                        <constraint firstAttribute="trailing" secondItem="Ib4-Uc-0mx" secondAttribute="trailing" constant="50" id="qH9-rb-aFz"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Sn-4L-Iej" userLabel="Left Triange View" customClass="TriangleView" customModule="SlotMachine" customModuleProvider="target">
+                    <rect key="frame" x="10" y="191" width="40" height="40"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="4Sn-4L-Iej" secondAttribute="height" multiplier="1:1" id="8AZ-jB-ReD"/>
+                        <constraint firstAttribute="width" constant="40" id="C0j-vM-tix"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tBN-Ee-Hvm" userLabel="Right Triange View" customClass="TriangleView" customModule="SlotMachine" customModuleProvider="target">
+                    <rect key="frame" x="434" y="191" width="40" height="40"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="240" id="1tc-HQ-fg1"/>
+                        <constraint firstAttribute="width" secondItem="tBN-Ee-Hvm" secondAttribute="height" multiplier="1:1" id="wtv-vl-vgh"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="1tc-HQ-fg1"/>
+                        </mask>
+                    </variation>
+                </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="Ib4-Uc-0mx" secondAttribute="bottom" id="B7s-Eb-ao8"/>
-                <constraint firstItem="Ib4-Uc-0mx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="LdH-Fw-eJb"/>
-                <constraint firstItem="Ib4-Uc-0mx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="jBH-aI-HNV"/>
-                <constraint firstAttribute="trailing" secondItem="Ib4-Uc-0mx" secondAttribute="trailing" id="mwF-Ib-OhL"/>
+                <constraint firstItem="lFz-dv-YfG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="BTz-iT-fAz"/>
+                <constraint firstItem="tBN-Ee-Hvm" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="H0I-nL-nrC"/>
+                <constraint firstItem="4Sn-4L-Iej" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="NWI-tj-o7X"/>
+                <constraint firstItem="tBN-Ee-Hvm" firstAttribute="width" secondItem="4Sn-4L-Iej" secondAttribute="width" id="T2r-wm-wfB"/>
+                <constraint firstAttribute="bottom" secondItem="lFz-dv-YfG" secondAttribute="bottom" constant="10" id="UXj-Na-QpB"/>
+                <constraint firstAttribute="trailing" secondItem="tBN-Ee-Hvm" secondAttribute="trailing" constant="10" id="bnB-84-Ii8"/>
+                <constraint firstItem="lFz-dv-YfG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="cvE-Tr-Q94"/>
+                <constraint firstAttribute="trailing" secondItem="lFz-dv-YfG" secondAttribute="trailing" constant="20" id="ldA-30-HKL"/>
+                <constraint firstItem="4Sn-4L-Iej" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="o21-gk-c1N"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
