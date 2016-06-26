@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA96029E1D200F6200ADC48C /* SpinButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA96029D1D200F6200ADC48C /* SpinButton.swift */; };
+		AA9602A01D20162900ADC48C /* SpinButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA96029F1D20162900ADC48C /* SpinButtonTests.swift */; };
+		AA9602A21D20177300ADC48C /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9602A11D20177300ADC48C /* ViewControllerTests.swift */; };
 		AAA18F641D1F4A6C0030F311 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA18F631D1F4A6C0030F311 /* AppDelegate.swift */; };
 		AAA18F661D1F4A6C0030F311 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA18F651D1F4A6C0030F311 /* ViewController.swift */; };
 		AAA18F691D1F4A6C0030F311 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAA18F671D1F4A6C0030F311 /* Main.storyboard */; };
@@ -54,6 +57,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA96029D1D200F6200ADC48C /* SpinButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinButton.swift; sourceTree = "<group>"; };
+		AA96029F1D20162900ADC48C /* SpinButtonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinButtonTests.swift; sourceTree = "<group>"; };
+		AA9602A11D20177300ADC48C /* ViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		AAA18F601D1F4A6C0030F311 /* SlotMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlotMachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAA18F631D1F4A6C0030F311 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAA18F651D1F4A6C0030F311 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +167,8 @@
 				AAA18FB81D1FCD460030F311 /* SlotColumnViewTests.swift */,
 				AAA18FB61D1FCD2D0030F311 /* SlotMachineViewTests.swift */,
 				AAA18FC71D200CFB0030F311 /* TriangleViewTests.swift */,
+				AA96029F1D20162900ADC48C /* SpinButtonTests.swift */,
+				AA9602A11D20177300ADC48C /* ViewControllerTests.swift */,
 				AAA18FBC1D1FDC660030F311 /* TestHelper.swift */,
 				AAA18F7A1D1F4A6C0030F311 /* Info.plist */,
 			);
@@ -219,6 +227,7 @@
 				AAA18FAF1D1F528D0030F311 /* XibLoadingView.swift */,
 				AAA18FA21D1F4D1F0030F311 /* SlotColumnView.swift */,
 				AAA18FC21D20012F0030F311 /* TriangleView.swift */,
+				AA96029D1D200F6200ADC48C /* SpinButton.swift */,
 				AAA18FAE1D1F52620030F311 /* SlotMachineView */,
 			);
 			name = Views;
@@ -382,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAA18FC31D20012F0030F311 /* TriangleView.swift in Sources */,
+				AA96029E1D200F6200ADC48C /* SpinButton.swift in Sources */,
 				AAA18FA61D1F4DDE0030F311 /* Configurable.swift in Sources */,
 				AAA18F9C1D1F4AF60030F311 /* SlotElement.swift in Sources */,
 				AAA18F971D1F4ADF0030F311 /* SlotColumnViewModel.swift in Sources */,
@@ -404,11 +414,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAA18FBF1D1FDCAF0030F311 /* SlotMachineViewModelTests.swift in Sources */,
+				AA9602A01D20162900ADC48C /* SpinButtonTests.swift in Sources */,
 				AAA18FB91D1FCD460030F311 /* SlotColumnViewTests.swift in Sources */,
 				AAA18FBD1D1FDC660030F311 /* TestHelper.swift in Sources */,
 				AAA18FB71D1FCD2D0030F311 /* SlotMachineViewTests.swift in Sources */,
 				AAA18F791D1F4A6C0030F311 /* SlotElementViewModelTests.swift in Sources */,
 				AAA18FBB1D1FDC4A0030F311 /* SlotColumnViewModelTests.swift in Sources */,
+				AA9602A21D20177300ADC48C /* ViewControllerTests.swift in Sources */,
 				AAA18FC81D200CFB0030F311 /* TriangleViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -628,6 +640,7 @@
 				AAA18F8A1D1F4A6C0030F311 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AAA18F8B1D1F4A6C0030F311 /* Build configuration list for PBXNativeTarget "SlotMachineTests" */ = {
 			isa = XCConfigurationList;
@@ -636,6 +649,7 @@
 				AAA18F8D1D1F4A6C0030F311 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AAA18F8E1D1F4A6C0030F311 /* Build configuration list for PBXNativeTarget "SlotMachineUITests" */ = {
 			isa = XCConfigurationList;
@@ -644,6 +658,7 @@
 				AAA18F901D1F4A6C0030F311 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

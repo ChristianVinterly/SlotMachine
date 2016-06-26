@@ -25,21 +25,37 @@
                                     <constraint firstAttribute="width" secondItem="3Dv-0p-zfA" secondAttribute="height" multiplier="4:3" id="iIO-Js-16u"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9IF-g8-dkk" customClass="SpinButton" customModule="SlotMachine" customModuleProvider="target">
+                                <rect key="frame" x="20" y="301.5" width="335" height="90"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="g5e-XV-IIq"/>
+                                </constraints>
+                                <state key="normal" title="Spin!"/>
+                                <connections>
+                                    <action selector="spinButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZYd-WE-CAr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9IF-g8-dkk" secondAttribute="trailing" constant="20" id="5Kk-e3-JBh"/>
                             <constraint firstItem="3Dv-0p-zfA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="5Ni-DZ-5hg"/>
+                            <constraint firstItem="9IF-g8-dkk" firstAttribute="top" secondItem="3Dv-0p-zfA" secondAttribute="bottom" id="DMH-yp-ZRc"/>
                             <constraint firstAttribute="trailing" secondItem="3Dv-0p-zfA" secondAttribute="trailing" id="P5o-79-U8g"/>
+                            <constraint firstItem="9IF-g8-dkk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="jYb-mA-XU3"/>
                             <constraint firstItem="3Dv-0p-zfA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="k3o-d7-yBd"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="slotMachineView" destination="3Dv-0p-zfA" id="4PI-xf-sA7"/>
+                        <outlet property="spinButton" destination="9IF-g8-dkk" id="BmL-lx-ZOb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="300.5" y="372.5"/>
         </scene>
     </scenes>
 </document>
