@@ -1,4 +1,4 @@
-# SlotMachine
+# SlotMachine (100% test coverage)
 
 ![alt tag](https://cloud.githubusercontent.com/assets/12391750/16365422/00211438-3c00-11e6-8daa-435320acf879.png)
 
