@@ -21,10 +21,10 @@ class CollectionTypeShuffleTests: XCTestCase {
     }
     
     func testShuffle() {
-        let array = ["1", "2", "3"]
+        let array = Array(1...1000)
         let shuffledArray = array.shuffle()
         
-        XCTAssertNotNil(shuffledArray)
+        XCTAssertTrue(array != shuffledArray)
     }
     
     func testShuffleArrayWithOneElement() {
