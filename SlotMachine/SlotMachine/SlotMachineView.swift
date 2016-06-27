@@ -38,8 +38,8 @@ class SlotMachineView: XibLoadingView {
     private let cornerRadius: CGFloat = 10
     private let borderWidth: CGFloat = 10
     
-    private let animationDurationBase: CGFloat = 0.15
-    private let animationDurationVarianse: UInt32 = 5
+    private let animationDurationBase: CGFloat = 0.05
+    private let animationDurationVarianse: UInt32 = 10
     private let animationDelayVarianse: UInt32 = 40
     private let animationDenominator: CGFloat = 100
     

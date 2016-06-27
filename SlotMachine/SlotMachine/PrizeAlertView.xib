@@ -29,7 +29,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB">
                     <rect key="frame" x="20" y="166" width="335" height="335"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vK-oH-mbE">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vK-oH-mbE">
                             <rect key="frame" x="10" y="20" width="315" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -46,18 +46,26 @@
                             </connections>
                         </button>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Go8-sm-yNA">
-                            <rect key="frame" x="92" y="92" width="150" height="150"/>
+                            <rect key="frame" x="68" y="61" width="199" height="199"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="Go8-sm-yNA" secondAttribute="height" multiplier="1:1" id="8Vr-ch-OZF"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="KNc-o6-4VO"/>
                                 <constraint firstAttribute="width" constant="150" id="MoE-H9-bMH"/>
                             </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="MoE-H9-bMH"/>
+                                </mask>
+                            </variation>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="Go8-sm-yNA" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="9VH-br-xbS"/>
                         <constraint firstItem="7vK-oH-mbE" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="D02-uA-doV"/>
+                        <constraint firstItem="Go8-sm-yNA" firstAttribute="top" secondItem="7vK-oH-mbE" secondAttribute="bottom" constant="20" id="DM4-GF-dbp"/>
                         <constraint firstAttribute="trailing" secondItem="Dnp-g9-ms7" secondAttribute="trailing" id="DM5-dM-TzC"/>
+                        <constraint firstItem="Dnp-g9-ms7" firstAttribute="top" secondItem="Go8-sm-yNA" secondAttribute="bottom" constant="20" id="NS3-OA-z0e"/>
                         <constraint firstItem="Go8-sm-yNA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="PhL-aA-abj"/>
                         <constraint firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="1:1" id="QFs-Ua-emN"/>
                         <constraint firstAttribute="bottom" secondItem="Dnp-g9-ms7" secondAttribute="bottom" id="f7f-nK-t7K"/>
@@ -65,6 +73,11 @@
                         <constraint firstItem="Dnp-g9-ms7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="jC2-zs-rSq"/>
                         <constraint firstItem="7vK-oH-mbE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="wn2-UF-MsO"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="9VH-br-xbS"/>
+                        </mask>
+                    </variation>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

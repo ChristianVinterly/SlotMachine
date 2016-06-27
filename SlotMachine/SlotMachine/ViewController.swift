@@ -63,7 +63,11 @@ class ViewController: UIViewController {
     func stopSpinning() {
         spinTimer.invalidate()
         slotMachineView.spinState = .Stop
-        spinButton.buttonState = .ReadyToSpin
+        
+        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(0.5 * Double(NSEC_PER_SEC)))
+        dispatch_after(delayTime, dispatch_get_main_queue()) {
+            self.spinButton.buttonState = .ReadyToSpin
+        }
     }
 }
 
